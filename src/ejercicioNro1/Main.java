@@ -30,24 +30,15 @@ public class Main {
 			
 			
 			
-			//Producto 1
-				System.out.println("Ingrese su razon social");
-				unComprador.setRazonSocial(scan.nextLine());
-				
-				System.out.println("Ingrese su domicilio");
-				unComprador.setDomicilio(scan.nextLine());
-				
+			//Lectura de comprador y producto 1
+			
+			
+			
+				leerComprador(scan, unComprador);
 				
 				
-				System.out.println("Ingrese cantidad del producto");
-				producto1.setCantidad(scan.nextDouble());
-				scan.nextLine();
-					
-				System.out.println("Ingrese descripcion");
-				producto1.setDescripcion( scan.nextLine());
-					
-				System.out.println("Ingrese valor unitario");
-				producto1.setPrecio(scan.nextDouble());
+				
+				leerProducto(scan, producto1);
 					
 					
 					
@@ -55,15 +46,7 @@ public class Main {
 					
 				System.out.println("Producto 2:");
 					
-				System.out.println("Ingrese cantidad del producto");
-				producto2.setCantidad( scan.nextDouble());
-				scan.nextLine();
-					
-				System.out.println("Ingrese descripcion");
-				producto2.setDescripcion(scan.nextLine());
-					
-				System.out.println("Ingrese valor unitario");
-				producto2.setPrecio(scan.nextDouble());
+				leerProducto(scan, producto2);
 					
 					
 					
@@ -103,6 +86,26 @@ public class Main {
 		
 		
 		
+	}
+
+	private static void leerProducto(Scanner scan, Producto producto1) {
+		System.out.println("Ingrese cantidad del producto");
+		producto1.setCantidad(scan.nextDouble());
+		scan.nextLine();
+			
+		System.out.println("Ingrese descripcion");
+		producto1.setDescripcion( scan.nextLine());
+			
+		System.out.println("Ingrese valor unitario");
+		producto1.setPrecio(scan.nextDouble());
+	}
+
+	private static void leerComprador(Scanner scan, Comprador unComprador) {
+		System.out.println("Ingrese su razon social");
+		unComprador.setRazonSocial(scan.nextLine());
+		
+		System.out.println("Ingrese su domicilio");
+		unComprador.setDomicilio(scan.nextLine());
 	}
 
 }
